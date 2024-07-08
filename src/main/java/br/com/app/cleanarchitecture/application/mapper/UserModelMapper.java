@@ -33,7 +33,6 @@ public class UserModelMapper {
                 userModel.getId(),
                 userModel.getUsername(),
                 userModel.getEmail(),
-                userModel.getPassword(),
                 userModel.getName(),
                 userModel.getRole(),
                 userModel.isEnabled()

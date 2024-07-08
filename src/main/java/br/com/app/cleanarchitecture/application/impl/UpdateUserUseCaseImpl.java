@@ -3,8 +3,8 @@ package br.com.app.cleanarchitecture.application.impl;
 import br.com.app.cleanarchitecture.application.UpdateUserUseCase;
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
+import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
 import br.com.app.cleanarchitecture.application.mapper.UserModelMapper;
-import br.com.app.cleanarchitecture.application.exception.NotFoundException;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import br.com.app.cleanarchitecture.domain.model.UserModel;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ public class UpdateUserUseCaseImpl implements UpdateUserUseCase {
     @Override
     public UserResponse execute(Long id, UserRequest request) {
         UserModel userModel = userGateway.findById(id)
-                .orElseThrow(() -> new NotFoundException("User not found with ID: " + id));
+                .orElseThrow(() -> new EntityNotFoundException(id));
         UserModelMapper.synchronizeUserModelWithRequest(userModel, request);
         UserModel updatedUserModel = userGateway.update(userModel);
         return UserModelMapper.fromUserModelToResponse(updatedUserModel);

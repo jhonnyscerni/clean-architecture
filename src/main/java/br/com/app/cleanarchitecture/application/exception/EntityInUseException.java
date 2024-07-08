@@ -1,14 +1,14 @@
 package br.com.app.cleanarchitecture.application.exception;
 
-public class BusinessException extends RuntimeException {
+public class EntityInUseException extends BusinessException {
 
     private static final long serialVersionUID = 1L;
 
-    public BusinessException(String message) {
+    public EntityInUseException(String message) {
         super(message);
     }
 
-    public BusinessException(String message, Throwable cause) {
+    public EntityInUseException(String message, Throwable cause) {
         super(message, cause);
     }
 }

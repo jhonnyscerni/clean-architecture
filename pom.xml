@@ -71,6 +71,10 @@
             <artifactId>flyway-core</artifactId>
             <version>10.15.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -85,6 +89,31 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.8.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>0.14</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <targetClasses>
+                        <param>br.com.app.cleanarchitecture.application.impl.*</param>
+                        <param>br.com.app.cleanarchitecture.infrastructure.entrypoint.api.controller.impl.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>br.com.app.cleanarchitecture.application.impl.*Test</param>
+                        <param>br.com.app.cleanarchitecture.infrastructure.entrypoint.api.controller.impl.*Test</param>
+                    </targetTests>
+                    <excludedClasses>
+                        <param>br.com.app.cleanarchitecture.application.mapper.UserModelMapper</param>
+                    </excludedClasses>
                 </configuration>
             </plugin>
         </plugins>

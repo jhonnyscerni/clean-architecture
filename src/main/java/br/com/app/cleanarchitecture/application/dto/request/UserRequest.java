@@ -1,11 +1,21 @@
 package br.com.app.cleanarchitecture.application.dto.request;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class UserRequest {
 
     private Long id;
+
+    @NotBlank
     private String username;
+
+    @NotBlank
     private String email;
+
+    @NotBlank
     private String password;
+
+    @NotBlank
     private String name;
     protected String role;
     private boolean enabled;

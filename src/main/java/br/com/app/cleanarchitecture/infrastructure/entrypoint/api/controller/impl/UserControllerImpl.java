@@ -4,6 +4,7 @@ import br.com.app.cleanarchitecture.application.*;
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.infrastructure.entrypoint.api.controller.UserController;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,13 +35,13 @@ public class UserControllerImpl implements UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserResponse> createUser(@RequestBody UserRequest userRequest) {
+    public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) {
         UserResponse userResponse = createUserUseCase.execute(userRequest);
         return new ResponseEntity<>(userResponse, HttpStatus.CREATED);
     }
 
     @PutMapping("/{userId}")
-    public ResponseEntity<UserResponse> updateUser(@PathVariable Long userId, @RequestBody UserRequest userRequest) {
+    public ResponseEntity<UserResponse> updateUser(@Valid @PathVariable Long userId, @RequestBody UserRequest userRequest) {
         UserResponse userResponse = updateUserUseCase.execute(userId, userRequest);
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }

@@ -12,7 +12,7 @@ public class UserResponse {
     public UserResponse() {
     }
 
-    public UserResponse(Long id, String username, String email, String password, String name, String role, boolean enabled) {
+    public UserResponse(Long id, String username, String email, String name, String role, boolean enabled) {
         this.id = id;
         this.username = username;
         this.email = email;

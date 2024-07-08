@@ -1,7 +1,7 @@
 package br.com.app.cleanarchitecture.application.impl;
 
 import br.com.app.cleanarchitecture.application.DeleteUserUseCase;
-import br.com.app.cleanarchitecture.application.exception.NotFoundException;
+import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public class DeleteUserUseCaseImpl implements DeleteUserUseCase {
                         () -> {
                             String errorMessage = String.format("User with ID %d not found, cannot delete.", id);
                             logger.error(errorMessage);
-                            throw new NotFoundException("user", id);
+                            throw new EntityNotFoundException(id);
                         }
                 );
     }

@@ -5,7 +5,6 @@ import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.exception.BusinessException;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import br.com.app.cleanarchitecture.domain.model.UserModel;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
