@@ -25,12 +25,7 @@ Identity providers - Auth0, Keycloak
 Emails providers
 Storage services - AWS, Azure Blob Storage
 Message queues - RabbitMQ, Kafka
-
-### Presentation Layer
-
-A camada de Apresentação é o ponto de entrada para o nosso sistema. Normalmente, você implementaria isso como um projeto de Web API.
-
-A parte mais importante da camada de Apresentação são os Controladores, que definem os endpoints da API em nosso sistema.
+Controllers
 
 TODO: Adicionar diagrama de arquitetura limpa
 TODO: Adicionar diagrama de arquitetura limpa com módulos
