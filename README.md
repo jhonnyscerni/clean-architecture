@@ -17,6 +17,8 @@ Você pode estruturar seus casos de uso usando services ou commands e queries. S
 
 ### Infrastructure Layer
 
+![arquitetura.png](src%2Fmain%2Fresources%2Fimg%2Farquitetura.png)
+
 A camada de infraestrutura contém implementações para serviços externos. O que se enquadraria nesta categoria?
 
 Databases - SqlServer, PostgreSQL, MongoDB
@@ -31,14 +33,6 @@ Controllers
 ![pitest-usecase.png](src%2Fmain%2Fresources%2Fimg%2Fpitest-usecase.png)
 #### Canmada Infrastructure Layer
 ![pitest-controller.png](src%2Fmain%2Fresources%2Fimg%2Fpitest-controller.png)
-
-#### TODO: Adicionar diagrama de arquitetura limpa
-#### TODO: Adicionar diagrama de arquitetura limpa com módulos
-#### TODO: Adicionar diagrama de arquitetura limpa com módulos e camadas
-#### TODO: Adicionar exemplos de código
-#### TODO: Adicionar exemplos de CI/CD
-#### TODO: Adicionar exemplos de Docker
-
 
 ### DUVIDAS: 
 #### Na camada de UseCase eu crio um Request e Response para manipular os dados ou eu passo o objeto direto para camada de Infraestrutura para manipular esses dados?
@@ -79,3 +73,8 @@ Mapper com Injeção de Dependência:
 Vantagens: Maior flexibilidade e facilita a testabilidade, permitindo a substituição de implementações em testes. Promove o desacoplamento e adere aos princípios de inversão de dependência.
 Desvantagens: Maior complexidade na gestão de dependências e na configuração inicial do projeto.
 Para um projeto que valoriza a testabilidade e a flexibilidade, especialmente em um ambiente que já faz uso intensivo da injeção de dependência (como projetos Spring Boot), a abordagem com injeção de dependência é recomendada.
+
+
+#### TODO: Adicionar exemplos de código
+#### TODO: Adicionar exemplos de CI/CD
+#### TODO: Adicionar exemplos de Docker
