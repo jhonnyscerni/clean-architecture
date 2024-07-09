@@ -27,8 +27,10 @@ Message queues - RabbitMQ, Kafka
 Controllers
 
 ### Desenho da Arquitetura (Exemplo)
-
 ![arquitetura.png](src%2Fmain%2Fresources%2Fimg%2Farquitetura.png)
+
+### End-points da API - Swagger
+![swagger.png](src%2Fmain%2Fresources%2Fimg%2Fswagger.png)
 
 ### Cobertura de Testes de Mutação Utilozando o Pitest
 #### Canmada Application Layer
