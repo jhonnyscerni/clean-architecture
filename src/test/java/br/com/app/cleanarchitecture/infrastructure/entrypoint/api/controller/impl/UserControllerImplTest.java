@@ -136,14 +136,21 @@ class UserControllerImplTest {
         // Given
         Long userId = 1L;
         UserRequest userRequest = new UserRequest(userId, "existingUser", "existingUser@example.com", "password", "Existing User", "ROLE_USER", true);
-        UserResponse expectedUser = new UserResponse(1L, "newUser", "newUser@example.com", "New User", "ROLE_USER", true);
-        when(updateUserUseCase.execute(userId, userRequest)).thenReturn(expectedUser);
+        UserResponse expectedUser = new UserResponse(1L, "editUser", "editUser@example.com", "Edit User", "ROLE_USER", true);
+
+        when(updateUserUseCase.execute(Mockito.anyLong(), Mockito.any(UserRequest.class))).thenReturn(expectedUser);
 
         // When & Then
-        mockMvc.perform(put("/users/{id}", userId)
+        mockMvc.perform(put("/users/"+userId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(userRequest)))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id", is(1)))
+                .andExpect(jsonPath("$.username", is("editUser")))
+                .andExpect(jsonPath("$.email", is("editUser@example.com")))
+                .andExpect(jsonPath("$.name", is("Edit User")))
+                .andExpect(jsonPath("$.role", is("ROLE_USER")))
+                .andExpect(jsonPath("$.enabled", is(true)));
     }
     @Test
     void givenInvalidUserRequest_whenUpdateUserIsCalled_thenShouldReturnBadRequest() throws Exception {

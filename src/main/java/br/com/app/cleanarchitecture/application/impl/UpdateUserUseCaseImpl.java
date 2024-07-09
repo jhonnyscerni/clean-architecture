@@ -7,12 +7,11 @@ import br.com.app.cleanarchitecture.application.exception.EntityNotFoundExceptio
 import br.com.app.cleanarchitecture.application.mapper.UserModelMapper;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import br.com.app.cleanarchitecture.domain.model.UserModel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UpdateUserUseCaseImpl implements UpdateUserUseCase {
 
-    private static final Logger logger = LoggerFactory.getLogger(UpdateUserUseCaseImpl.class);
     private final UserGateway userGateway;
 
     public UpdateUserUseCaseImpl(UserGateway userGateway) {

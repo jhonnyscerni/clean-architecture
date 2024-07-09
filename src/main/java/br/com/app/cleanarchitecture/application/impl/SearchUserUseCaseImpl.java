@@ -4,10 +4,12 @@ import br.com.app.cleanarchitecture.application.SearchUserUseCase;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.mapper.UserModelMapper;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class SearchUserUseCaseImpl implements SearchUserUseCase {
 
     private final UserGateway userGateway;

@@ -5,7 +5,9 @@ import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.mapper.UserModelMapper;
 import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GetUserUseCaseImpl implements GetUserUseCase {
 
     private final UserGateway userGateway;
