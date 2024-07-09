@@ -17,8 +17,6 @@ Você pode estruturar seus casos de uso usando services ou commands e queries. S
 
 ### Infrastructure Layer
 
-![arquitetura.png](src%2Fmain%2Fresources%2Fimg%2Farquitetura.png)
-
 A camada de infraestrutura contém implementações para serviços externos. O que se enquadraria nesta categoria?
 
 Databases - SqlServer, PostgreSQL, MongoDB
@@ -27,6 +25,8 @@ Emails providers
 Storage services - AWS, Azure Blob Storage
 Message queues - RabbitMQ, Kafka
 Controllers
+
+![arquitetura.png](src%2Fmain%2Fresources%2Fimg%2Farquitetura.png)
 
 ### Cobertura de Testes de Mutação Utilozando o Pitest
 #### Canmada Application Layer
