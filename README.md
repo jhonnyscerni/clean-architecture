@@ -26,6 +26,8 @@ Storage services - AWS, Azure Blob Storage
 Message queues - RabbitMQ, Kafka
 Controllers
 
+### Desenho da Arquitetura (Exemplo)
+
 ![arquitetura.png](src%2Fmain%2Fresources%2Fimg%2Farquitetura.png)
 
 ### Cobertura de Testes de Mutação Utilozando o Pitest
