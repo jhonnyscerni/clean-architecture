@@ -1,6 +1,6 @@
-package br.com.app.cleanarchitecture.application.impl;
+package br.com.app.cleanarchitecture.application.usecase.impl;
 
-import br.com.app.cleanarchitecture.application.DeleteUserUseCase;
+import br.com.app.cleanarchitecture.application.usecase.DeleteUserUseCase;
 import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package br.com.app.cleanarchitecture.application;
+package br.com.app.cleanarchitecture.application.usecase;
 
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 

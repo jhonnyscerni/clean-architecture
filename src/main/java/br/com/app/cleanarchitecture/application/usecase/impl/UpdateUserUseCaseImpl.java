@@ -1,6 +1,6 @@
-package br.com.app.cleanarchitecture.application.impl;
+package br.com.app.cleanarchitecture.application.usecase.impl;
 
-import br.com.app.cleanarchitecture.application.UpdateUserUseCase;
+import br.com.app.cleanarchitecture.application.usecase.UpdateUserUseCase;
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;

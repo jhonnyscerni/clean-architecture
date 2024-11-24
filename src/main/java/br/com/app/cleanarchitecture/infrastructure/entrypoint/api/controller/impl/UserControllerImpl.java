@@ -1,8 +1,8 @@
 package br.com.app.cleanarchitecture.infrastructure.entrypoint.api.controller.impl;
 
-import br.com.app.cleanarchitecture.application.*;
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
+import br.com.app.cleanarchitecture.application.usecase.*;
 import br.com.app.cleanarchitecture.infrastructure.entrypoint.api.controller.UserController;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

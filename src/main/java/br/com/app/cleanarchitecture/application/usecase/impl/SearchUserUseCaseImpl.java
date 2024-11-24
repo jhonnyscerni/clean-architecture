@@ -1,6 +1,6 @@
-package br.com.app.cleanarchitecture.application.impl;
+package br.com.app.cleanarchitecture.application.usecase.impl;
 
-import br.com.app.cleanarchitecture.application.SearchUserUseCase;
+import br.com.app.cleanarchitecture.application.usecase.SearchUserUseCase;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.mapper.UserModelMapper;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;

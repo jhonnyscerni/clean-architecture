@@ -3,7 +3,7 @@ package br.com.app.cleanarchitecture.infrastructure.entrypoint.api.controller.im
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
-import br.com.app.cleanarchitecture.application.impl.*;
+import br.com.app.cleanarchitecture.application.usecase.impl.*;
 import br.com.app.cleanarchitecture.infrastructure.exception.handler.ApiExceptionHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +13,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
 import org.springframework.http.MediaType;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;

@@ -1,9 +1,9 @@
-package br.com.app.cleanarchitecture.application;
+package br.com.app.cleanarchitecture.application.usecase;
 
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 
-public interface UpdateUserUseCase {
+public interface CreateUserUseCase {
 
-    UserResponse execute(Long id, UserRequest request);
+    UserResponse execute(UserRequest request);
 }

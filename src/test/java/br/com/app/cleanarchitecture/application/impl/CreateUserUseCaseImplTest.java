@@ -3,6 +3,7 @@ package br.com.app.cleanarchitecture.application.impl;
 import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.exception.BusinessException;
+import br.com.app.cleanarchitecture.application.usecase.impl.CreateUserUseCaseImpl;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import br.com.app.cleanarchitecture.domain.model.UserModel;
 import org.junit.jupiter.api.Test;

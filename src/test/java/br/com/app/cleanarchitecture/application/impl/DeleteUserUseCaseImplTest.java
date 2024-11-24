@@ -1,6 +1,7 @@
 package br.com.app.cleanarchitecture.application.impl;
 
 import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
+import br.com.app.cleanarchitecture.application.usecase.impl.DeleteUserUseCaseImpl;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import br.com.app.cleanarchitecture.domain.model.UserModel;
 import org.junit.jupiter.api.BeforeEach;

@@ -4,6 +4,7 @@ import br.com.app.cleanarchitecture.application.dto.request.UserRequest;
 import br.com.app.cleanarchitecture.application.dto.response.UserResponse;
 import br.com.app.cleanarchitecture.application.exception.EntityNotFoundException;
 import br.com.app.cleanarchitecture.application.mapper.UserModelMapper;
+import br.com.app.cleanarchitecture.application.usecase.impl.UpdateUserUseCaseImpl;
 import br.com.app.cleanarchitecture.domain.gateway.UserGateway;
 import br.com.app.cleanarchitecture.domain.model.UserModel;
 import org.junit.jupiter.api.BeforeEach;
